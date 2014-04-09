@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pine.h"
 
 @interface DataViewController : UIViewController
+
+@property (strong, nonatomic) Pine *pine;
+
 
 @end

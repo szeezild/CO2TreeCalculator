@@ -21,6 +21,7 @@
 
 @end
 
+
 @implementation DataViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -49,17 +50,22 @@
     
 }
 
-- (IBAction)unwindToDataVC:(UIStoryboardSegue *)unwindSegue {
+- (IBAction)unwindToDataVC:(UIStoryboardSegue *)sender {
     
-    DataViewController *dataVC = unwindSegue.sourceViewController;
+    DataViewController *dataVC = sender.sourceViewController;
+    
+    NSIndexPath *indexPath =
+    
+//    UITableViewCell *cell = sender
     
     
-    
-    self.treeButton.titleLabel.text = ;
+    self.treeButton.titleLabel.text = dataVC.title;
     
     
 }
-
+//MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
+//
+//UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatureCell"];
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField

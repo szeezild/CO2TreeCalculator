@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
 
-    self.title = @"Land Data";
+    self.title = @"Tree Types";
     
     Pine *pine = [[Pine alloc] init];
     pine.name = @"Pine";
@@ -57,16 +57,21 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    Pine *pine = [self.treeTypeArray objectAtIndex:indexPath.row];
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newCellID"];
     
-    Pine *pine = 
-    
 //    set textLabels to array names
-    cell.textLabel.text = @"yes";
+    cell.textLabel.text = pine.name;
     
     return cell;
 }
 
+//MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
+//
+//UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatureCell"];
+//
+//cell.textLabel.text = creature.name;
 
 
 @end
