@@ -7,11 +7,13 @@
 //
 
 #import "ShowCoordViewController.h"
+#import "SetCoordViewController.h"
 #import "Coordinate.h"
 
 @interface ShowCoordViewController () <UITableViewDataSource, UITableViewDelegate>
 
-@property NSMutableArray *coordArray;
+@property (weak, nonatomic) IBOutlet UITableView *showTableView;
+
 
 @end
 
@@ -30,23 +32,17 @@
 {
     [super viewDidLoad];
     
-//    Coordinate *coordA = [[Coordinate alloc] init];
-//    coordA.name = @"Point A";
-//    coordA.lat = @87.9876;
-//    coordA.lng = @-41.8854;
-//    
-//    Coordinate *coordB = [[Coordinate alloc] init];
-//    coordB.name = @"Point B";
-//    coordB.lat = @77.9876;
-//    coordB.lng = @-51.8854;
-
+    Coordinate *coordA = [[Coordinate alloc]init];
+    coordA.dict = @{@"name": @"Point A - Required", @"lat":@"", @"lng":@""};
+    
+    Coordinate *coordB = [[Coordinate alloc]init];
+    coordB.dict = @{@"name": @"Point B - Required", @"lat":@"", @"lng":@""};
+    
     Coordinate *coordC = [[Coordinate alloc]init];
-    coordC.dict = @{@"name": @"Point C", @"lat":@"87.54", @"lng":@"42.4533"};
+    coordC.dict = @{@"name": @"Point C - Required", @"lat":@"", @"lng":@""};
     
     
-    
-    
-    self.coordArray = [NSMutableArray arrayWithObjects:coordC, nil];
+    self.coordArray = [NSMutableArray arrayWithObjects:coordA, coordB, coordC, nil];
     
 
 }
@@ -62,14 +58,24 @@
     Coordinate *coord = [self.coordArray objectAtIndex:indexPath.row];
     
     cell.textLabel.text = coord.dict[@"name"];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Lat is %@   Long is %@", coord.dict[@"lat"], coord.dict[@"lng"]];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Latitude: %@    Longitude: %@", coord.dict[@"lat"], coord.dict[@"lng"]];
     
     
     
     return cell;
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    
+    NSIndexPath *indexPath = [self.showTableView indexPathForCell:sender];
+    
+    Coordinate *thisCoord = [self.coordArray objectAtIndex:indexPath.row];
+    
+    SetCoordViewController *newVC = segue.destinationViewController;
+    
+    newVC.coord = thisCoord;
 
+}
 
 
 

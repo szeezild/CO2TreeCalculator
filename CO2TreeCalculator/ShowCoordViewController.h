@@ -10,4 +10,7 @@
 
 @interface ShowCoordViewController : UIViewController
 
+@property NSMutableArray *coordArray;
+
+
 @end

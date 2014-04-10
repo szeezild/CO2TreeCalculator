@@ -7,10 +7,16 @@
 //
 
 #import "SetCoordViewController.h"
+#import "ShowCoordViewController.h"
+#import "Coordinate.h"
+#import <MapKit/MapKit.h>
+
 
 @interface SetCoordViewController ()
 
 @property (weak, nonatomic) IBOutlet UIButton *setCoordButton;
+
+@property BOOL userLocationUpdated;
 
 
 @end
@@ -29,14 +35,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
     [self.setCoordButton.titleLabel setTextAlignment: NSTextAlignmentCenter];
-
-
+    
+    
+    
+    if ( [self.coord.dict[@"name"] isEqualToString:@"Point A - Required"] ) {
+        NSLog(@"%@", self.coord.dict[@"name"]);
+    }
+    
 
 }
 
 - (IBAction)onSetCoordButtonPressed:(id)sender {
+    
+//    Coordinate *coord = 
+    
+    
 }
 
 

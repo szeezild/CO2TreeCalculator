@@ -39,13 +39,16 @@
 
     self.title = @"Tree Types";
     
-    Tree *pine = [[Tree alloc] init];
-    pine.name = @"Pine";
+    Tree *yellowPine = [[Tree alloc] init];
+    yellowPine.name = @"Yellow Pine";
+    
+    Tree *loblollyPine = [[Tree alloc] init];
+    loblollyPine.name = @"Loblolly Pine";
     
     Tree *eucalyptus = [[Tree alloc] init];
     eucalyptus.name = @"Eucalyptus";
     
-    self.treeTypeArray = [NSMutableArray arrayWithObjects:pine, eucalyptus, nil];
+    self.treeTypeArray = [NSMutableArray arrayWithObjects:yellowPine, loblollyPine, eucalyptus, nil];
 
 
 }

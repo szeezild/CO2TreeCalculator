@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>3740BDE0-BB02-41C4-96A5-DED6EFC6CD29</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CO2TreeCalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB8228B8-F059-4F66-9E15-BD84F7CCEFED</key>
+		<string>https://github.com/szeezild/CO2TreeCalculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>CO2TreeCalculator.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB8228B8-F059-4F66-9E15-BD84F7CCEFED</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/szeezild/CO2TreeCalculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB8228B8-F059-4F66-9E15-BD84F7CCEFED</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB8228B8-F059-4F66-9E15-BD84F7CCEFED</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CO2TreeCalculator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

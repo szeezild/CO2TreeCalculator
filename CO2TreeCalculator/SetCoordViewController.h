@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Coordinate.h"
 
 @interface SetCoordViewController : UIViewController
+
+@property Coordinate *coord;
 
 @end
