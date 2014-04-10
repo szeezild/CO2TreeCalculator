@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Pine.h"
+#import "Tree.h"
 
 @interface DataViewController : UIViewController
 
-@property (strong, nonatomic) Pine *pine;
+@property (strong, nonatomic) Tree *tree;
 
+
+- (IBAction)doneClicked:(id)sender;
 
 @end

@@ -24,8 +24,13 @@
 		07BACE5018F365550077E56F /* NewSiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE4F18F365550077E56F /* NewSiteViewController.m */; };
 		07BACE5318F365850077E56F /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE5218F365850077E56F /* DataViewController.m */; };
 		07BACE5618F365C70077E56F /* TreeTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE5518F365C70077E56F /* TreeTypeViewController.m */; };
-		07BACE9A18F49BF70077E56F /* Pine.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE9918F49BF70077E56F /* Pine.m */; };
-		07BACE9D18F49C190077E56F /* Eucalyptus.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE9C18F49C190077E56F /* Eucalyptus.m */; };
+		07BACE9A18F49BF70077E56F /* Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACE9918F49BF70077E56F /* Tree.m */; };
+		07BACEE118F5CDD00077E56F /* ShowCoordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACEE018F5CDD00077E56F /* ShowCoordViewController.m */; };
+		07BACEE418F5D0F30077E56F /* Coordinate.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACEE318F5D0F30077E56F /* Coordinate.m */; };
+		07BACEE718F5E8F60077E56F /* SetCoordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACEE618F5E8F60077E56F /* SetCoordViewController.m */; };
+		07BACEEA18F5F70A0077E56F /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 07BACEE918F5F70A0077E56F /* MapViewController.m */; };
+		07BACEEC18F5F7AC0077E56F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BACEEB18F5F7AC0077E56F /* MapKit.framework */; };
+		07BACEEE18F5F7B80077E56F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07BACEED18F5F7B80077E56F /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,10 +69,18 @@
 		07BACE5218F365850077E56F /* DataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataViewController.m; sourceTree = "<group>"; };
 		07BACE5418F365C70077E56F /* TreeTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeTypeViewController.h; sourceTree = "<group>"; };
 		07BACE5518F365C70077E56F /* TreeTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeTypeViewController.m; sourceTree = "<group>"; };
-		07BACE9818F49BF70077E56F /* Pine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pine.h; sourceTree = "<group>"; };
-		07BACE9918F49BF70077E56F /* Pine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pine.m; sourceTree = "<group>"; };
-		07BACE9B18F49C190077E56F /* Eucalyptus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Eucalyptus.h; sourceTree = "<group>"; };
-		07BACE9C18F49C190077E56F /* Eucalyptus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Eucalyptus.m; sourceTree = "<group>"; };
+		07BACE9818F49BF70077E56F /* Tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		07BACE9918F49BF70077E56F /* Tree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tree.m; sourceTree = "<group>"; };
+		07BACEDF18F5CDD00077E56F /* ShowCoordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowCoordViewController.h; sourceTree = "<group>"; };
+		07BACEE018F5CDD00077E56F /* ShowCoordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowCoordViewController.m; sourceTree = "<group>"; };
+		07BACEE218F5D0F30077E56F /* Coordinate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Coordinate.h; sourceTree = "<group>"; };
+		07BACEE318F5D0F30077E56F /* Coordinate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Coordinate.m; sourceTree = "<group>"; };
+		07BACEE518F5E8F60077E56F /* SetCoordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SetCoordViewController.h; sourceTree = "<group>"; };
+		07BACEE618F5E8F60077E56F /* SetCoordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SetCoordViewController.m; sourceTree = "<group>"; };
+		07BACEE818F5F70A0077E56F /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		07BACEE918F5F70A0077E56F /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		07BACEEB18F5F7AC0077E56F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		07BACEED18F5F7B80077E56F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +88,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07BACEEE18F5F7B80077E56F /* CoreLocation.framework in Frameworks */,
+				07BACEEC18F5F7AC0077E56F /* MapKit.framework in Frameworks */,
 				07BACE1C18F351EB0077E56F /* CoreGraphics.framework in Frameworks */,
 				07BACE1E18F351EB0077E56F /* UIKit.framework in Frameworks */,
 				07BACE1A18F351EB0077E56F /* Foundation.framework in Frameworks */,
@@ -116,6 +131,8 @@
 		07BACE1818F351EB0077E56F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07BACEED18F5F7B80077E56F /* CoreLocation.framework */,
+				07BACEEB18F5F7AC0077E56F /* MapKit.framework */,
 				07BACE1918F351EB0077E56F /* Foundation.framework */,
 				07BACE1B18F351EB0077E56F /* CoreGraphics.framework */,
 				07BACE1D18F351EB0077E56F /* UIKit.framework */,
@@ -138,10 +155,16 @@
 				07BACE5218F365850077E56F /* DataViewController.m */,
 				07BACE5418F365C70077E56F /* TreeTypeViewController.h */,
 				07BACE5518F365C70077E56F /* TreeTypeViewController.m */,
-				07BACE9818F49BF70077E56F /* Pine.h */,
-				07BACE9918F49BF70077E56F /* Pine.m */,
-				07BACE9B18F49C190077E56F /* Eucalyptus.h */,
-				07BACE9C18F49C190077E56F /* Eucalyptus.m */,
+				07BACEDF18F5CDD00077E56F /* ShowCoordViewController.h */,
+				07BACEE018F5CDD00077E56F /* ShowCoordViewController.m */,
+				07BACEE518F5E8F60077E56F /* SetCoordViewController.h */,
+				07BACEE618F5E8F60077E56F /* SetCoordViewController.m */,
+				07BACEE818F5F70A0077E56F /* MapViewController.h */,
+				07BACEE918F5F70A0077E56F /* MapViewController.m */,
+				07BACEE218F5D0F30077E56F /* Coordinate.h */,
+				07BACEE318F5D0F30077E56F /* Coordinate.m */,
+				07BACE9818F49BF70077E56F /* Tree.h */,
+				07BACE9918F49BF70077E56F /* Tree.m */,
 				07BACE3118F351EB0077E56F /* Images.xcassets */,
 				07BACE2018F351EB0077E56F /* Supporting Files */,
 			);
@@ -276,12 +299,15 @@
 			files = (
 				07BACE3018F351EB0077E56F /* RootViewController.m in Sources */,
 				07BACE2A18F351EB0077E56F /* AppDelegate.m in Sources */,
+				07BACEE118F5CDD00077E56F /* ShowCoordViewController.m in Sources */,
+				07BACEE418F5D0F30077E56F /* Coordinate.m in Sources */,
 				07BACE5618F365C70077E56F /* TreeTypeViewController.m in Sources */,
 				07BACE2618F351EB0077E56F /* main.m in Sources */,
 				07BACE5018F365550077E56F /* NewSiteViewController.m in Sources */,
-				07BACE9A18F49BF70077E56F /* Pine.m in Sources */,
-				07BACE9D18F49C190077E56F /* Eucalyptus.m in Sources */,
+				07BACE9A18F49BF70077E56F /* Tree.m in Sources */,
 				07BACE5318F365850077E56F /* DataViewController.m in Sources */,
+				07BACEE718F5E8F60077E56F /* SetCoordViewController.m in Sources */,
+				07BACEEA18F5F70A0077E56F /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

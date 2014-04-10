@@ -7,12 +7,16 @@
 //
 
 #import "TreeTypeViewController.h"
-#import "Pine.h"
-#import "Eucalyptus.h"
+#import "DataViewController.h"
+#import "Tree.h"
+
 
 @interface TreeTypeViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property NSMutableArray *treeTypeArray;
+
+@property (weak, nonatomic) IBOutlet UITableView *treeTypeTableView;
+
 
 @end
 
@@ -35,16 +39,14 @@
 
     self.title = @"Tree Types";
     
-    Pine *pine = [[Pine alloc] init];
+    Tree *pine = [[Tree alloc] init];
     pine.name = @"Pine";
     
-    Eucalyptus *eucalyptus = [[Eucalyptus alloc] init];
+    Tree *eucalyptus = [[Tree alloc] init];
     eucalyptus.name = @"Eucalyptus";
     
     self.treeTypeArray = [NSMutableArray arrayWithObjects:pine, eucalyptus, nil];
 
-    
-    
 
 }
 
@@ -57,21 +59,28 @@
 
 -(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    Pine *pine = [self.treeTypeArray objectAtIndex:indexPath.row];
+    Tree *pine = [self.treeTypeArray objectAtIndex:indexPath.row];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newCellID"];
     
 //    set textLabels to array names
     cell.textLabel.text = pine.name;
-    
+
     return cell;
 }
 
-//MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
-//
-//UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatureCell"];
-//
-//cell.textLabel.text = creature.name;
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UITableViewCell *)sender {
+    
+    NSIndexPath *indexPath = [self.treeTypeTableView indexPathForCell:sender];
+    
+    Tree *tree = [self.treeTypeArray objectAtIndex:indexPath.row];
+    
+    DataViewController *vc = segue.destinationViewController;
+    
+//    the vc has a property pine that is being set to the instance of pine created above
+    vc.tree = tree;
+}
+
 
 
 @end

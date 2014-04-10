@@ -8,8 +8,8 @@
 
 #import "DataViewController.h"
 #import "TreeTypeViewController.h"
-#import "Pine.h"
-#import "Eucalyptus.h"
+#import "Tree.h"
+
 
 @interface DataViewController () <UITextFieldDelegate>
 
@@ -38,34 +38,31 @@
 {
     [super viewDidLoad];
     
-    
-    
+    [self.treeButton.titleLabel setTextAlignment: NSTextAlignmentCenter];
+
+
+
+    UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+    [keyboardDoneButtonView sizeToFit];
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+                                                               style:UIBarButtonItemStyleBordered target:self
+                                                              action:@selector(doneClicked:)];
+    [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+    self.treeAgeTextField.inputAccessoryView = keyboardDoneButtonView;
+    self.treesPerAcreTextField.inputAccessoryView = keyboardDoneButtonView;
+
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(UIButton *)sender {
-    
-//    TreeTypeViewController *treeTypeVC = segue.destinationViewController;
-    
-    
-    
+- (IBAction)doneClicked:(id)sender
+{
+    [self.view endEditing:YES];
 }
 
 - (IBAction)unwindToDataVC:(UIStoryboardSegue *)sender {
     
-    DataViewController *dataVC = sender.sourceViewController;
-    
-    NSIndexPath *indexPath =
-    
-//    UITableViewCell *cell = sender
-    
-    
-    self.treeButton.titleLabel.text = dataVC.title;
-    
+    self.treeButton.titleLabel.text = self.tree.name;
     
 }
-//MagicalCreature *creature = [creatures objectAtIndex:indexPath.row];
-//
-//UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CreatureCell"];
 
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField
